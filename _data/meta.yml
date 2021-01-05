@@ -1,7 +1,6 @@
 index:
   welcome_message: >
+    ## Layout Matters
+
     Layout Parser is a deep learning based tool for document image layout analysis tasks. 
-  news_highlight_color: 'is-info'
-  personal_description: >
-    THis is a great website.
 footnote: 
