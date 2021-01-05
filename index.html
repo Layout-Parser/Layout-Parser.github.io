@@ -2,10 +2,23 @@
 layout: page
 ---
 
-<div class="columns">
-    <div class="column">
-        <div class="content">
-            {{ site.data.meta.index.welcome_message | markdownify }}
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <p class='slogan'>{{site.data.meta.index.slogan}}</p>
         </div>
     </div>
-</div>
+</section>
+
+{% for section in site.data.meta.index.sections %}
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                {{ section.title }}
+            </h1>
+            {{ section.description | markdownify }}
+        </div>
+    </div>
+</section>
+{% endfor %}

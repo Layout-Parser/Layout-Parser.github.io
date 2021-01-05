@@ -34,6 +34,14 @@ $fullhd-enabled: false;
     text-transform: capitalize;
     font-size: 2rem;
 }
+
+.slogan {
+    font-family: $family-header;
+    font-weight: bold;
+    font-size: 2.25rem;
+}
+
+
 .news-time {
     font-family: $family-sans-serif;
 }
@@ -46,7 +54,6 @@ h4,
 h5,
 h6 {
     font-family: $family-header;
-    font-style: italic;
 }
 
 .content .highlight {

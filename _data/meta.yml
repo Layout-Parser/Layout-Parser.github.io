@@ -1,6 +1,23 @@
 index:
-  welcome_message: >
-    ## Layout Matters
+  slogan: >
+    Deep Learning for Layout Understanding 
+  # Layout Analysis in the era of Deep Learning
+  
+  sections: 
+    - title: Less Rules 
+      description: >
+        *An animation illustrating how the code is simplified using LayoutParser*
+    
+    - title: High Accuracy
+      description: >
+        *An illustration for comparing the accuracy between rule-based method and LayoutParser-based methods*
 
-    Layout Parser is a deep learning based tool for document image layout analysis tasks. 
+    - title: Unified Pipeline 
+      description: >
+        *Provide a list of the tools from LayoutParser to facilitate training*
+
+    - title: Try it yourself 
+      description: >
+        *Provide a Google colab or some example files for users to play with*
+    
 footnote: 
