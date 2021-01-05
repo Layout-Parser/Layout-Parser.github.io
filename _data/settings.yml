@@ -5,5 +5,7 @@
 
 menu:
 - {name: 'About', file: ''}
+- {name: 'Models', file: 'models.html'}
+- {name: 'Documentation', file: 'https://layout-parser.readthedocs.io/en/latest/'}
 
 social:
