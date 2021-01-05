@@ -1,0 +1,18 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Mac Finder Configurations
+.DS_Store
+
+# IDEA configurations
+.idea/
+
+# IPython checkpoints
+.ipynb_checkpoints/
+log
+
+# Visual Studio Code
+.vscode/
