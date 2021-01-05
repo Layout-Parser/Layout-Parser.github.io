@@ -1,0 +1,43 @@
+<div class="article-list-footer">
+    <span class="article-list-date">
+        {{ include.post.date | date: "%B %-d, %Y" }}
+    </span>
+    <span class="article-list-divider">-</span>
+    <span class="article-list-minutes">
+        {% capture words %}
+        {{ include.post.content | number_of_words }}
+        {% endcapture %}
+        {% unless words contains "-" %}
+        {{ words | plus: 250 | divided_by: 250 | append: " minute read" }}
+        {% endunless %}
+    </span>
+    </span>
+    {% if include.post.categories.size >= 1 %}
+    <span class="article-list-divider">-</span>
+    <span class="article-list-cat">Category:</span>
+    {% endif %}
+    <span class="field">
+        {% for cat in include.post.categories %}
+        <a href="/category/{{ cat | downcase }}" class="article-list-item">
+            {{ cat | capitalize | remove: '<p>' | remove: '</p>' }}
+        </a>
+        {% if forloop.last != true %}
+        ,
+        {% endif %}
+        {% endfor %}
+    </span>
+    {% if include.post.tags.size >= 1 %}
+    <span class="article-list-divider">-</span>
+    <span class="article-list-cat">Tags:</span>
+    {% endif %}
+    <span class="field">
+        {% for tag in include.post.tags %}
+        <a href="/tag/{{ tag | downcase }}" class="article-list-item">
+            {{ tag | capitalize | remove: '<p>' | remove: '</p>' }}
+        </a>
+        {% if forloop.last != true %}
+        ,
+        {% endif %}
+        {% endfor %}
+    </span>
+</div>

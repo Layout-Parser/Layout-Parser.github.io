@@ -1,0 +1,7 @@
+{% if site.data.meta.footnote %}
+<footer class="footer">
+    <div class="content has-text-centered is-size-7">
+        {{ site.data.meta.footnote | markdownify }}
+    </div>
+</footer>
+{% endif %}

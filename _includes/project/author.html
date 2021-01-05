@@ -1,0 +1,21 @@
+ 
+<div class="article-list-footer">
+    {% for item in include.post.authors %}
+    <span class="article-list-author">
+        <a href="{{item.website}}">{{ item.name }}</a>
+        <a href="mailto:{{item.email}}" class="has-text-grey-info"><i class="fas fa-envelope-square is-light"></i></a>
+        {% if item.twitter%}
+            <a href="{{item.twitter}}" class="has-text-grey-info"><i class="fab fa-twitter-square"></i></a>
+        {% endif %}
+    </span>
+        {% if forloop.last != true %}
+        ,
+        {% endif %}
+    {% endfor %}
+    <!-- <span class="article-list-divider">-</span>
+    <span class="field is-grouped">
+        {% for tag in include.post.tags %}
+            <a class="tag">{{ tag | upcase }}</a>
+        {% endfor %}
+    </span> -->
+</div>
