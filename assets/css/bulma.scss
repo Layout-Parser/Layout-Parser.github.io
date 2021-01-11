@@ -105,6 +105,10 @@ h6:hover .header-link {
 
 button:focus {outline: none !important;}
 
+.m-0 {
+    margin: 0;
+}
+
 .nav_item,
 .slogan,
 .white_color {
@@ -124,6 +128,10 @@ button:focus {outline: none !important;}
     color: #EBBBBB !important;
 }
 
+.grey_background {
+    background-color:#F4F4F4;
+}
+
 .nav_logo,
 .index_logo,
 .background_img {
@@ -132,6 +140,7 @@ button:focus {outline: none !important;}
     background-position: center;
 }
 
+.index_slack_btn_txt,
 a.fill_div {
     display: block;
     height: 100%;
@@ -143,6 +152,14 @@ a.fill_div {
 .center_content {
     margin-left: calc(20vw - 50px) !important;
     margin-right: calc(10vw - 20px) !important;
+}
+
+.index_copy_code,
+.nav_item,
+.index_slack_btn,
+.default_btn_style {
+    transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 // Nav
@@ -191,14 +208,41 @@ a.fill_div {
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
     border: none;
-    transition-duration: 0.5s;
-    cursor: pointer;
     color:#EB5757D9;
 }
-
 .index_copy_code:hover {
     background-color: #EB5757D9;
     color: white;
+}
+
+.index_slack {
+    background-image: url('./../images/Slack.svg');
+    height:100%;
+    width:100%;
+    background-size: 100% 100%;
+}
+
+.index_slack_title {
+    font-size: 4vw;
+    color: black !important;
+}
+
+.index_slack_btn {
+    border: none;
+    background-color: #EB5757D9;
+}
+.index_slack_btn:hover {
+    background-color: #EB5757;
+}
+
+.index_slack_btn_txt {
+    font-size: 1.5vw;
+    color: white !important;
+    padding: 0.5em;
+}
+.index_slack_btn_txt:hover {
+    font-size: 1.5vw;
+    padding: 0.5em;
 }
 
 

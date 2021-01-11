@@ -4,6 +4,10 @@ index:
   # Layout Analysis in the era of Deep Learning
   description: >
     Layout Parser is a deep learning based tool for document image layout analysis tasks.
+
+  install: >
+    $ pip install layoutparser
+
   sections: 
     - title: Less Rules 
       description: >
@@ -20,5 +24,9 @@ index:
     - title: Try it yourself 
       description: >
         *Provide a Google colab or some example files for users to play with*
+
+  slack:
+    join: >
+      Join us on Slack!
     
 footnote: 
