@@ -1,8 +1,9 @@
 index:
   slogan: >
-    Deep Learning for Layout Understanding 
+    Deep Learning for Layout Understanding
   # Layout Analysis in the era of Deep Learning
-  
+  description: >
+    Layout Parser is a deep learning based tool for document image layout analysis tasks.
   sections: 
     - title: Less Rules 
       description: >

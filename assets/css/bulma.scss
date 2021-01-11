@@ -21,8 +21,8 @@ $divider-thickness: 0.075rem;
 $tabs-border-bottom-width: 0.075rem;
 
 // Layout Issues
-$widescreen-enabled: false;
-$fullhd-enabled: false;
+$widescreen-enabled: true;
+$fullhd-enabled: true;
 
 // Import Bulma
 @import "bulma/bulma";
@@ -98,3 +98,112 @@ h6:hover .header-link {
     left: 0;
     top: 0;
 }
+
+// May need to find better place to put styles
+
+// general
+
+button:focus {outline: none !important;}
+
+.nav_item,
+.slogan,
+.white_color {
+    color:white !important;
+}
+
+.theme1_color {
+    background-color:#EB5757D9;
+}
+
+.theme1_background {
+    background-color:#EB5757D9;
+}
+
+.index_description,
+.theme2_color {
+    color: #EBBBBB !important;
+}
+
+.nav_logo,
+.index_logo,
+.background_img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+a.fill_div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+// for centering content with space on left & right
+.center_content {
+    margin-left: calc(20vw - 50px) !important;
+    margin-right: calc(10vw - 20px) !important;
+}
+
+// Nav
+
+.nav_brand {
+    height: 5vw;
+}
+
+.nav_logo {
+    background-image: url('./../images/Logo.svg');
+    width: 24vw;
+    min-width: 150px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 3em;
+}
+
+.nav_item {}
+.nav_item:hover {
+    background-color: #EB5757 !important;
+}
+
+
+// Index
+
+.index_slogan {
+    font-size: 4vw;
+}
+
+.index_description {
+    font-size: 2vw !important;
+}
+
+.index_logo {
+    background-image: url('./../images/LP.svg');
+    height:100%;
+    width:100%;
+    background-size: 100% 100%;
+    margin-left: 5em;
+}
+
+.index_copy_code {
+    padding: 1vw;
+    border-radius: 0;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    border: none;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    color:#EB5757D9;
+}
+
+.index_copy_code:hover {
+    background-color: #EB5757D9;
+    color: white;
+}
+
+
+// About
+
+
+// Models
+

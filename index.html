@@ -2,22 +2,39 @@
 layout: page
 ---
 
-<section class="hero">
+<section class="hero theme1_background">
     <div class="hero-body">
         <div class="container">
-            <p class='slogan'>{{site.data.meta.index.slogan}}</p>
+            <div class="columns center_content">
+                <div class="column is-three-quarters pl-0">
+                    <p class='slogan index_slogan'>{{site.data.meta.index.slogan}}</p>
+                    <p class='slogan index_description'>{{site.data.meta.index.description}}</p>
+                    <button class="mt-6 mb-6 index_copy_code">
+                        <span class="icon is-small">
+                            <i class="fas fa-copy"></i>
+                        </span>
+                        <span>$ pip install layoutparser</span>
+                    </button>
+                </div>
+                <div class="column">
+                    <div class="index_logo"></div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+<div>
 
 {% for section in site.data.meta.index.sections %}
 <section class="hero">
     <div class="hero-body">
         <div class="container">
-            <h1 class="title">
-                {{ section.title }}
-            </h1>
-            {{ section.description | markdownify }}
+            <div class="center_content">
+                <h1 class="title">
+                    {{ section.title }}
+                </h1>
+                {{ section.description | markdownify }}
+            </div>
         </div>
     </div>
 </section>
