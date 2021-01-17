@@ -5,11 +5,13 @@
 
 assets:
   logo: '/assets/site/lp-logo.svg' 
-  badge: '/assets/site/lp-badge.svg' 
+  badge: '/assets/site/lp-badge-white.svg' 
 
 menu:
 - {name: 'Tutorials', file: 'models.html'}
 - {name: 'Docs', file: 'https://layout-parser.readthedocs.io/en/latest/'}
+- {name: 'Discussion', file: ''}
 
 social:
-- {name: 'slack', icon: 'fab fa-slack-hash', link: ''}
+# - {name: 'slack', icon: 'fab fa-slack-hash', link: ''}
+- {name: 'Github', icon: 'fab fa-github', link: 'https://github.com/Layout-Parser/layout-parser'}

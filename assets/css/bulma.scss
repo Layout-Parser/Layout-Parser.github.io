@@ -19,6 +19,8 @@ $navbar-height: 5rem;
 $divider-thickness: 0.075rem;
 $tabs-border-bottom-width: 0.075rem;
 
+$red: #e46767;
+
 // Layout Issues
 $widescreen-enabled: true;
 $fullhd-enabled: false;
@@ -33,6 +35,10 @@ $navbar-item-img-max-height: 4rem;
 // Navbar
 .lp-navbar {
     padding: 16px 0;
+}
+
+.hero-head .lp-navbar {
+    padding-bottom: 0px;
 }
 
 .lp-badge {
@@ -50,10 +56,6 @@ $navbar-item-img-max-height: 4rem;
     font-family: $family-header;
     font-weight: bold;
     font-size: 2.25rem;
-}
-
-.news-time {
-    font-family: $family-sans-serif;
 }
 
 // Article & posts styles

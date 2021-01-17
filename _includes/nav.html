@@ -20,13 +20,13 @@
                 {% for item in site.data.settings.menu %}
                 <a href="{{ item.file }}" class="navbar-item">{{ item.name }}</a>
                 {% endfor %}
+                {% for item in site.data.settings.social %}
                 <div class="navbar-item">
-                    {% for item in site.data.settings.social %}
-                    <a href="{{ item.link }}" class="button is-white" target="_blank">
+                    <a href="{{ item.link }}" class="button is-danger" target="_blank">
                         <i class="{{ item.icon }} fa-w-14 fa-lg" aria-hidden="true"></i>
                     </a>
-                    {% endfor %}
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>
