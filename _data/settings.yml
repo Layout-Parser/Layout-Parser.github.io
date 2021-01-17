@@ -3,9 +3,13 @@
 # disqus-ID: x
 # utterances-repo: x
 
+assets:
+  logo: '/assets/site/lp-logo.svg' 
+  badge: '/assets/site/lp-badge.svg' 
+
 menu:
-- {name: 'About', file: ''}
-- {name: 'Models', file: 'models.html'}
-- {name: 'Documentation', file: 'https://layout-parser.readthedocs.io/en/latest/'}
+- {name: 'Tutorials', file: 'models.html'}
+- {name: 'Docs', file: 'https://layout-parser.readthedocs.io/en/latest/'}
 
 social:
+- {name: 'slack', icon: 'fab fa-slack-hash', link: ''}

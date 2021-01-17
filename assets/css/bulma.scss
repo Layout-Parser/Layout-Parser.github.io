@@ -4,10 +4,9 @@
 @charset "utf-8";
 
 // Font Issues
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@400;600&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
-$family-site-title: "Josefin Sans", sans-serif;
-$family-header: "Roboto Condensed", sans-serif;
+$family-header: "Fira Sans Extra Condensed", sans-serif;
 $family-primary: "Lato", sans-serif;
 $family-secondary: "Lato", sans-serif;
 $family-sans-serif: "Lato", sans-serif;
@@ -21,18 +20,30 @@ $divider-thickness: 0.075rem;
 $tabs-border-bottom-width: 0.075rem;
 
 // Layout Issues
-$widescreen-enabled: false;
+$widescreen-enabled: true;
 $fullhd-enabled: false;
+
+// Navbar
+$navbar-item-img-max-height: 4rem;
 
 // Import Bulma
 @import "bulma/bulma";
 @import "bulma-divider/src/sass/index";
 
-// Site and index page styles
-.site-title {
-    font-family: $family-site-title;
-    text-transform: capitalize;
-    font-size: 2rem;
+// Navbar
+.lp-navbar {
+    padding: 16px 0;
+}
+
+.lp-badge {
+    height: 50px;
+    vertical-align: middle;
+}
+
+.navbar-item {
+    font-family: $family-header;
+    font-weight: 400;
+    font-size: 1.25rem;
 }
 
 .slogan {
@@ -40,7 +51,6 @@ $fullhd-enabled: false;
     font-weight: bold;
     font-size: 2.25rem;
 }
-
 
 .news-time {
     font-family: $family-sans-serif;
