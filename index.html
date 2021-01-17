@@ -1,11 +1,20 @@
 ---
-layout: page
+layout: default
 ---
 
 <section class="hero">
     <div class="hero-body">
         <div class="container">
-            <p class='slogan'>{{site.data.meta.index.slogan}}</p>
+            <div class="columns">
+                <div class="column is-5">
+                    <div class="content slogan">
+                        {{site.data.meta.index.slogan | markdownify}}
+                    </div>            
+                </div>
+                <div class="column">
+                    
+                </div>
+            </div>
         </div>
     </div>
 </section>
