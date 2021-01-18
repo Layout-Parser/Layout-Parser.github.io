@@ -33,6 +33,20 @@ $navbar-item-img-max-height: 4rem;
 @import "bulma/bulma";
 @import "bulma-divider/src/sass/index";
 
+// public
+
+.install-btn,
+.slack-btn,
+.btn-anime {
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: none !important;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
 // Navbar
 .lp-navbar {
     padding: 16px 0;
@@ -67,6 +81,29 @@ $navbar-item-img-max-height: 4rem;
 
 .slogan-description {
     line-height: 145%;
+}
+
+// Install button
+
+.install-btn {
+    padding: 1rem;
+    border-radius: 0;
+    background-color: transparent;
+    font-family: "Source Code Pro", monospace;
+    font-size: 1.15rem;
+    border: 1px solid white;
+    color: white;
+}
+.install-btn:hover {
+    background-color: white;
+    border: 1px solid transparent;
+    color: $dark-red;
+}
+
+.modal-text {
+    color: white;
+    font-size: 72px;
+    text-align: center;
 }
 
 // Article & posts styles
@@ -122,37 +159,27 @@ h6:hover .header-link {
     top: 0;
 }
 
-.slack_btn,
-.btn_anime {
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.bg-transparent {
-    background-color: transparent !important;
-}
-
 // Slack
 
-.slack_hero {
+.slack-hero {
     background-color: #f5f5f5;
     box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.25);
 }
 
-.slack_title {
+.slack-title {
     font-family: $family-header;
     font-weight: bold;
 }
 
-.slack_btn {
+.slack-btn {
     border: none;
     background-color: $red;
 }
-.slack_btn:hover {
+.slack-btn:hover {
     background-color: $dark-red;
 }
 
-.slack_btn_txt {
+.slack-btn-txt {
     font-size: 1.15rem;
     font-family: $family-header;
     color: white !important;

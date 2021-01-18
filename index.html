@@ -18,6 +18,28 @@ show_nav: false
                         {{ site.data.index.slogan.description |
                         markdownify }}
                     </h2>
+                    <button class="mt-5 install-btn" onclick="copyPipInstall()">
+                        <script>
+                            function copyPipInstall() {
+                                var copyText = document.getElementById("pip-install")
+                                var textArea = document.createElement("textarea")
+                                textArea.value = copyText.textContent
+                                document.body.appendChild(textArea)
+                                textArea.select()
+                                document.execCommand("Copy")
+                                textArea.remove()
+                                $("#pip-install-modal").addClass("is-active")
+                                setTimeout(function () {
+                                    $('#pip-install-modal').removeClass("is-active")
+                                }, 800)
+                            }
+                        </script>
+
+                        <span class="is-small mr-3">
+                            <i class="fas fa-copy"></i>
+                        </span>
+                        <span id="pip-install">{{site.data.index.slogan.install}}</span>
+                    </button>
                 </div>
                 <div class="column">
                     <figure class="image is-2by1">
@@ -32,25 +54,26 @@ show_nav: false
 <section class="hero">
     <div class="hero-body">
         <div class="container">
-            {% include index/centered-title.html title=site.data.index.what.title description=site.data.index.what.description %}
+            {% include index/centered-title.html title=site.data.index.what.title
+            description=site.data.index.what.description %}
             <div class="is-divider"></div>
             <div class="columns">
                 <div class="column is-3">
                     <aside class="menu">
                         {% assign count = 0 %}
                         {% for function in site.data.index.what.functions %}
-                            <p class="menu-label">
-                                {{ function.title | capitalize }}
-                            </p>
-                            <ul class="menu-list">
-                                {% for attribute in function.attributes %}
+                        <p class="menu-label">
+                            {{ function.title | capitalize }}
+                        </p>
+                        <ul class="menu-list">
+                            {% for attribute in function.attributes %}
 
-                                    <li>
-                                        <a {% if count == 0 %} class="is-active" {% endif %}>{{attribute }}</a>
-                                    </li>
-                                    {% assign count = count | plus : 1 %}
-                                {% endfor %}
-                            </ul>
+                            <li>
+                                <a {% if count==0 %} class="is-active" {% endif %}>{{attribute }}</a>
+                            </li>
+                            {% assign count = count | plus : 1 %}
+                            {% endfor %}
+                        </ul>
                         {% endfor %}
                     </aside>
                 </div>
@@ -60,10 +83,17 @@ show_nav: false
                             Lorem Ipsum
                         </h2>
                         <p class="subtitle is-size-5">
-                            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                            velit...
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo convallis ultricies. Aliquam non suscipit nibh. Proin sed metus justo. Nullam dictum dolor vel felis accumsan congue. Vestibulum quis fermentum lacus. Aliquam eu ante elit. Integer consequat ex sed quam maximus, in placerat libero eleifend. Sed sed ullamcorper leo. In malesuada sollicitudin ligula sit amet malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse posuere venenatis ante a gravida. Mauris eu urna justo.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo convallis
+                            ultricies. Aliquam non suscipit nibh. Proin sed metus justo. Nullam dictum dolor vel felis
+                            accumsan congue. Vestibulum quis fermentum lacus. Aliquam eu ante elit. Integer consequat ex
+                            sed quam maximus, in placerat libero eleifend. Sed sed ullamcorper leo. In malesuada
+                            sollicitudin ligula sit amet malesuada. Orci varius natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus mus. Suspendisse posuere venenatis ante a gravida.
+                            Mauris eu urna justo.
                         </p>
                     </div>
                 </div>
@@ -75,35 +105,40 @@ show_nav: false
 <section class="hero">
     <div class="hero-body">
         <div class="container">
-            {% include index/centered-title.html title=site.data.index.learn.title description=site.data.index.learn.description %}
+            {% include index/centered-title.html title=site.data.index.learn.title
+            description=site.data.index.learn.description %}
             <div class="is-divider"></div>
             <div class="columns">
                 {% for tutorial in site.data.index.learn.tutorials %}
-                    <div class="column is-4">
-                        <div class="box" style="height: 100%">
-                            <h2 class="subtitle is-size-4">
-                                <a href="{{ tutorial.url }}">{{ tutorial.title }}</a>
-                            </h2>
-                            {{ tutorial.description | markdownify }}
-                        </div>
+                <div class="column is-4">
+                    <div class="box" style="height: 100%">
+                        <h2 class="subtitle is-size-4">
+                            <a href="{{ tutorial.url }}">{{ tutorial.title }}</a>
+                        </h2>
+                        {{ tutorial.description | markdownify }}
                     </div>
+                </div>
                 {% endfor %}
             </div>
         </div>
     </div>
 </section>
 
-<section class="hero slack_hero">
+<section class="hero slack-hero">
     <div class="hero-body">
         <div class="container">
             <div class="columns">
                 <div class="column pl-0">
-                    <p class='title is-size-2 slack_title'>{{site.data.index.slack.title}}</p>
+                    <p class='title is-size-2 slack-title'>{{site.data.index.slack.title}}</p>
                     <p class='subtitle is-size-5 mt-2'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo convallis ultricies. Aliquam non suscipit nibh. Proin sed metus justo. Nullam dictum dolor vel felis accumsan congue...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo convallis ultricies.
+                        Aliquam non suscipit nibh. Proin sed metus justo. Nullam dictum dolor vel felis accumsan
+                        congue...
                     </p>
-                    <button class="mt-2 p-4 slack_btn" >
-                        <a class="slack_btn_txt" href="https://join.slack.com/t/layout-parser/shared_invite/zt-kor9c345-8RX2Y26o7E0qXKxmTnBxLQ" target="_blank">Join our #Slack</a>
+                    <button class="mt-2 p-4 slack-btn">
+                        <a class="slack-btn-txt"
+                            href="https://join.slack.com/t/layout-parser/shared_invite/zt-kor9c345-8RX2Y26o7E0qXKxmTnBxLQ"
+                            target="_blank">Join our #Slack</a>
                     </button>
                 </div>
                 <div class="column is-two-fifths mr-5">
@@ -115,3 +150,10 @@ show_nav: false
         </div>
     </div>
 </section>
+
+<div class="modal btn-anime" id="pip-install-modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <p class='modal-text'>Copied!</p>
+    </div>
+</div>
