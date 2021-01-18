@@ -23,7 +23,7 @@ $red: #e46767;
 
 // Layout Issues
 $widescreen-enabled: true;
-$fullhd-enabled: false;
+$fullhd-enabled: true;
 
 // Navbar
 $navbar-item-img-max-height: 4rem;
@@ -42,20 +42,33 @@ $navbar-item-img-max-height: 4rem;
 }
 
 .lp-badge {
-    height: 50px;
+    height: 40px;
     vertical-align: middle;
 }
 
 .navbar-item {
     font-family: $family-header;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+}
+
+// Slogan
+
+.slogan-hero {
+    background-color: #e46767;
+    color: #ffffff;
 }
 
 .slogan {
     font-family: $family-header;
     font-weight: bold;
-    font-size: 2.25rem;
+    font-size: 2.5rem;
+    line-height: 145%;
+}
+
+.slogan-description {
+    font-size: 1.35rem;
+    line-height: 145%;
 }
 
 // Article & posts styles

@@ -1,0 +1,11 @@
+badge: '/assets/site/lp-badge-white.svg' 
+
+slogan: 
+  title: >
+    Layout Analysis <br>
+    in 4 Lines of Code
+  description: >
+    Accurate layout analysis using deep learning models. <br>
+    Highly customized labeling, training and deployment.
+  example: '/assets/site/example-usage.png'
+  # To change in near future
