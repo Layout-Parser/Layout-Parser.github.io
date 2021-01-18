@@ -3,7 +3,7 @@ layout: default
 show_nav: false
 ---
 
-<section class="hero is-danger is-bold" style="box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.25)">
+<section class="hero is-danger is-bold slogan-hero">
     <div class="hero-head">
         {% include nav.html %}
     </div>
@@ -11,18 +11,70 @@ show_nav: false
         <div class="container">
             <div class="columns">
                 <div class="column is-5">
-                    <h1 class="title slogan">
-                        {{site.data.index.slogan.title | markdownify}}
+                    <h1 class="title slogan is-size-2">
+                        {{ site.data.index.slogan.title | markdownify }}
                     </h1>
-                    <h2 class="subtitle has-text-white-ter slogan-description">
-                        {{site.data.index.slogan.description |
-                        markdownify}}
+                    <h2 class="subtitle has-text-white-ter slogan-description is-size-5">
+                        {{ site.data.index.slogan.description |
+                        markdownify }}
                     </h2>
                 </div>
                 <div class="column">
                     <figure class="image is-2by1">
                         <img src="{{ site.data.index.slogan.example }}">
                     </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-size-2">
+                        {{ site.data.index.what.title | markdownify }}
+                    </h1>
+                    <h2 class="subtitle is-size-4">
+                        {{ site.data.index.what.description  | markdownify }}
+                    </h2>
+                </div>
+            </div>
+            <div class="is-divider"></div>
+            <div class="columns">
+                <div class="column is-3">
+                    <aside class="menu">
+                        {% assign count = 0 %}
+                        {% for function in site.data.index.what.functions %}
+                            <p class="menu-label">
+                                {{ function.title | capitalize }}
+                            </p>
+                            <ul class="menu-list">
+                                {% for attribute in function.attributes %}
+
+                                    <li>
+                                        <a {% if count == 0 %} class="is-active" {% endif %}>{{attribute }}</a>
+                                    </li>
+                                    {% assign count = count | plus : 1 %}
+                                {% endfor %}
+                            </ul>
+                        {% endfor %}
+                    </aside>
+                </div>
+                <div class="column is-8 is-offset-1">
+                    <div class="content">
+                        <h2 class="title is-size-3">
+                            Lorem Ipsum
+                        </h2>
+                        <p class="subtitle is-size-5">
+                            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo convallis ultricies. Aliquam non suscipit nibh. Proin sed metus justo. Nullam dictum dolor vel felis accumsan congue. Vestibulum quis fermentum lacus. Aliquam eu ante elit. Integer consequat ex sed quam maximus, in placerat libero eleifend. Sed sed ullamcorper leo. In malesuada sollicitudin ligula sit amet malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse posuere venenatis ante a gravida. Mauris eu urna justo. 
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

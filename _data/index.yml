@@ -9,3 +9,24 @@ slogan:
     Highly customized labeling, training and deployment.
   example: '/assets/site/example-usage.png'
   # To change in near future
+
+what:
+  title: What is Layout Parser?
+  description: >
+    Layout Parser is a toolkit that streamlines deep learning based layout analysis. 
+  functions:  
+    - title: Datasets
+      attributes:
+        - Existing Datasets 
+        - Efficient Annotation 
+    - title: Models
+      attributes:
+        - Pre-trained Models
+        - Customized Training
+    - title: Detection
+      attributes:
+        - Easy to use API
+    - title: Import/Export
+      attributes: 
+        - Multiple formats
+        - Visualization 
