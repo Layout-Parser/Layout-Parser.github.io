@@ -48,4 +48,8 @@ learn:
       description: >
         Customized training the deep learning detection models on your dataset. 
       url: ""
+
+slack:
+  title: Join us on Slack!
+  figure: '/assets/site/slack-lp.svg'
     

@@ -20,6 +20,7 @@ $divider-thickness: 0.075rem;
 $tabs-border-bottom-width: 0.075rem;
 
 $red: #e46767;
+$dark-red: #e43851;
 
 // Layout Issues
 $widescreen-enabled: true;
@@ -119,4 +120,36 @@ h6:hover .header-link {
     height: 100%;
     left: 0;
     top: 0;
+}
+
+.slack_btn,
+.btn_anime {
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+// Slack
+
+.slack_hero {
+    background-color: #f5f5f5;
+    box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.25);
+}
+
+.slack_title {
+    font-family: $family-header;
+    font-weight: bold;
+}
+
+.slack_btn {
+    border: none;
+    background-color: $red;
+}
+.slack_btn:hover {
+    background-color: $dark-red;
+}
+
+.slack_btn_txt {
+    font-size: 1.15rem;
+    font-family: $family-header;
+    color: white !important;
 }
