@@ -54,26 +54,25 @@ show_nav: false
 <section class="hero">
     <div class="hero-body">
         <div class="container">
-            {% include index/centered-title.html title=site.data.index.what.title
-            description=site.data.index.what.description %}
+            {% include index/centered-title.html title=site.data.index.what.title description=site.data.index.what.description %}
             <div class="is-divider"></div>
             <div class="columns">
                 <div class="column is-3">
                     <aside class="menu">
                         {% assign count = 0 %}
                         {% for function in site.data.index.what.functions %}
-                        <p class="menu-label">
-                            {{ function.title | capitalize }}
-                        </p>
-                        <ul class="menu-list">
-                            {% for attribute in function.attributes %}
+                            <p class="menu-label">
+                                {{ function.title | capitalize }}
+                            </p>
+                            <ul class="menu-list">
+                                {% for attribute in function.attributes %}
 
-                            <li>
-                                <a {% if count==0 %} class="is-active" {% endif %}>{{attribute }}</a>
-                            </li>
-                            {% assign count = count | plus : 1 %}
-                            {% endfor %}
-                        </ul>
+                                    <li>
+                                        <a {% if count==0 %} class="is-active" {% endif %}>{{attribute }}</a>
+                                    </li>
+                                    {% assign count = count | plus : 1 %}
+                                {% endfor %}
+                            </ul>
                         {% endfor %}
                     </aside>
                 </div>
@@ -105,19 +104,18 @@ show_nav: false
 <section class="hero">
     <div class="hero-body">
         <div class="container">
-            {% include index/centered-title.html title=site.data.index.learn.title
-            description=site.data.index.learn.description %}
+            {% include index/centered-title.html title=site.data.index.learn.title description=site.data.index.learn.description %}
             <div class="is-divider"></div>
             <div class="columns">
                 {% for tutorial in site.data.index.learn.tutorials %}
-                <div class="column is-4">
-                    <div class="box" style="height: 100%">
-                        <h2 class="subtitle is-size-4">
-                            <a href="{{ tutorial.url }}">{{ tutorial.title }}</a>
-                        </h2>
-                        {{ tutorial.description | markdownify }}
+                    <div class="column is-4">
+                        <div class="box" style="height: 100%">
+                            <h2 class="subtitle is-size-4">
+                                <a href="{{ tutorial.url }}">{{ tutorial.title }}</a>
+                            </h2>
+                            {{ tutorial.description | markdownify }}
+                        </div>
                     </div>
-                </div>
                 {% endfor %}
             </div>
         </div>
