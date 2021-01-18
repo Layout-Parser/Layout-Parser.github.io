@@ -32,16 +32,7 @@ show_nav: false
 <section class="hero">
     <div class="hero-body">
         <div class="container">
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                    <h1 class="title is-size-2">
-                        {{ site.data.index.what.title | markdownify }}
-                    </h1>
-                    <h2 class="subtitle is-size-4">
-                        {{ site.data.index.what.description  | markdownify }}
-                    </h2>
-                </div>
-            </div>
+            {% include index/centered-title.html title=site.data.index.what.title description=site.data.index.what.description %}
             <div class="is-divider"></div>
             <div class="columns">
                 <div class="column is-3">
@@ -72,7 +63,7 @@ show_nav: false
                             Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo convallis ultricies. Aliquam non suscipit nibh. Proin sed metus justo. Nullam dictum dolor vel felis accumsan congue. Vestibulum quis fermentum lacus. Aliquam eu ante elit. Integer consequat ex sed quam maximus, in placerat libero eleifend. Sed sed ullamcorper leo. In malesuada sollicitudin ligula sit amet malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse posuere venenatis ante a gravida. Mauris eu urna justo. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo convallis ultricies. Aliquam non suscipit nibh. Proin sed metus justo. Nullam dictum dolor vel felis accumsan congue. Vestibulum quis fermentum lacus. Aliquam eu ante elit. Integer consequat ex sed quam maximus, in placerat libero eleifend. Sed sed ullamcorper leo. In malesuada sollicitudin ligula sit amet malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse posuere venenatis ante a gravida. Mauris eu urna justo.
                         </p>
                     </div>
                 </div>
@@ -81,15 +72,23 @@ show_nav: false
     </div>
 </section>
 
-{% for section in site.data.meta.index.sections %}
 <section class="hero">
     <div class="hero-body">
         <div class="container">
-            <h1 class="title">
-                {{ section.title }}
-            </h1>
-            {{ section.description | markdownify }}
+            {% include index/centered-title.html title=site.data.index.learn.title description=site.data.index.learn.description %}
+            <div class="is-divider"></div>
+            <div class="columns">
+                {% for tutorial in site.data.index.learn.tutorials %}
+                    <div class="column is-4">
+                        <div class="box" style="height: 100%">
+                            <h2 class="subtitle is-size-4">
+                                <a href="{{ tutorial.url }}">{{ tutorial.title }}</a>
+                            </h2>
+                            {{ tutorial.description | markdownify }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </section>
-{% endfor %}
