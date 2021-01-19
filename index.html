@@ -51,11 +51,11 @@ show_nav: false
     </div>
 </section>
 
+{% include index/centered-title.html title=site.data.index.what.title description=site.data.index.what.description sep=true %}
+
 <section class="hero">
-    <div class="hero-body">
+    <div class="hero-body pt-4">
         <div class="container">
-            {% include index/centered-title.html title=site.data.index.what.title description=site.data.index.what.description %}
-            <div class="is-divider"></div>
             <div class="columns">
                 <div class="column is-3">
                     <aside class="menu">
@@ -101,11 +101,12 @@ show_nav: false
     </div>
 </section>
 
+{% include index/centered-title.html title=site.data.index.learn.title description=site.data.index.learn.description %}
+
+
 <section class="hero">
-    <div class="hero-body">
+    <div class="hero-body pt-4">
         <div class="container">
-            {% include index/centered-title.html title=site.data.index.learn.title description=site.data.index.learn.description %}
-            <div class="is-divider"></div>
             <div class="columns">
                 {% for tutorial in site.data.index.learn.tutorials %}
                     <div class="column is-4">
@@ -122,11 +123,11 @@ show_nav: false
     </div>
 </section>
 
-<section class="hero slack-hero">
+<section class="hero slack-hero mt-6">
     <div class="hero-body">
         <div class="container">
             <div class="columns">
-                <div class="column pl-0">
+                <div class="column">
                     <p class='title is-size-2 slack-title'>{{site.data.index.slack.title}}</p>
                     <p class='subtitle is-size-5 mt-2'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo convallis ultricies.
@@ -139,7 +140,7 @@ show_nav: false
                             target="_blank">Join our #Slack</a>
                     </button>
                 </div>
-                <div class="column is-two-fifths mr-5">
+                <div class="column is-two-fifths">
                     <figure class="image is-2by1">
                         <img src="{{ site.data.index.slack.figure }}">
                     </figure>
