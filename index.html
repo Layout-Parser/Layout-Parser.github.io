@@ -53,6 +53,23 @@ show_nav: false
 
 {% include index/centered-title.html title=site.data.index.what.title description=site.data.index.what.description sep=true %}
 
+
+<script>
+    window.onload = () => {
+        document.querySelectorAll(".menu").forEach(menu => {
+            menu.querySelectorAll('a').forEach(atag => {
+                console.log(atag.target)
+                atag.onclick = () => {
+                    menu.querySelector('a.is-active').classList.remove('is-active');
+                    atag.classList.add('is-active');
+                    menu.parentElement.nextElementSibling.querySelector(".what-hero-detail.is-active").classList.remove("is-active");
+                    menu.parentElement.nextElementSibling.querySelector("#" + atag.text.replaceAll(" ", "-")).classList.add("is-active");
+                }
+            })
+        })
+    }
+</script>
+
 <section class="hero">
     <div class="hero-body pt-4">
         <div class="container">
@@ -66,9 +83,8 @@ show_nav: false
                             </p>
                             <ul class="menu-list">
                                 {% for attribute in function.attributes %}
-
                                     <li>
-                                        <a {% if count==0 %} class="is-active" {% endif %}>{{attribute }}</a>
+                                        <a {% if count==0 %} class="is-active" {% endif %}>{{ attribute.name }}</a>
                                     </li>
                                     {% assign count = count | plus : 1 %}
                                 {% endfor %}
@@ -77,24 +93,21 @@ show_nav: false
                     </aside>
                 </div>
                 <div class="column is-8 is-offset-1">
-                    <div class="content">
-                        <h2 class="title is-size-3">
-                            Lorem Ipsum
-                        </h2>
-                        <p class="subtitle is-size-5">
-                            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                            velit...
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo convallis
-                            ultricies. Aliquam non suscipit nibh. Proin sed metus justo. Nullam dictum dolor vel felis
-                            accumsan congue. Vestibulum quis fermentum lacus. Aliquam eu ante elit. Integer consequat ex
-                            sed quam maximus, in placerat libero eleifend. Sed sed ullamcorper leo. In malesuada
-                            sollicitudin ligula sit amet malesuada. Orci varius natoque penatibus et magnis dis
-                            parturient montes, nascetur ridiculus mus. Suspendisse posuere venenatis ante a gravida.
-                            Mauris eu urna justo.
-                        </p>
-                    </div>
+                    {% assign count = 0 %}
+                    {% for function in site.data.index.what.functions %}
+                        {% for attribute in function.attributes %}
+                            <div class="{% if count==0 %}is-active {% endif %}what-hero-detail"
+                            id="{{ attribute.name | replace: " ", "-" }}">
+                                {% if attribute.page != nil %}
+                                    {% assign target_page = "_functions/" | append: attribute.page %}
+                                    {% include_relative {{ target_page }} %}
+                                {% else %}
+                                    {% include_relative _functions/dummy.html %}
+                                {% endif %}
+                            </div>  
+                            {% assign count = count | plus : 1 %}
+                        {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -102,7 +115,6 @@ show_nav: false
 </section>
 
 {% include index/centered-title.html title=site.data.index.learn.title description=site.data.index.learn.description %}
-
 
 <section class="hero">
     <div class="hero-body pt-4">

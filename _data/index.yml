@@ -17,19 +17,20 @@ what:
   functions:  
     - title: Datasets
       attributes:
-        - Existing Datasets 
-        - Efficient Annotation 
+        - name: Existing Datasets 
+          page: existing-datasets.html
+        - name: Efficient Annotation 
     - title: Models
       attributes:
-        - Pre-trained Models
-        - Customized Training
+        - name: Pre-trained Models
+        - name: Customized Training
     - title: Detection
       attributes:
-        - Easy to use API
-    - title: Import/Export
+        - name: Easy to use API
+    - title: Storage
       attributes: 
-        - Multiple formats
-        - Visualization 
+        - name: Multiple formats
+        - name: Visualization 
 
 learn:
   title: Get started!

@@ -106,6 +106,15 @@ $navbar-item-img-max-height: 4rem;
     text-align: center;
 }
 
+// what-hero
+
+.what-hero-detail {
+    display: none;
+}
+.what-hero-detail.is-active {
+    display: initial;
+}
+
 // Article & posts styles
 h1,
 h2,
