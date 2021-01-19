@@ -18,3 +18,6 @@ menu:
 social:
 # - {name: 'slack', icon: 'fab fa-slack-hash', link: ''}
 - {name: 'Github', icon: 'fab fa-github', link: 'https://github.com/Layout-Parser/layout-parser'}
+
+footnote: >
+  Created and maintained by Layout Parser Developers. Built with [jekyll](https://jekyllrb.com/) and [bulma](http://bulma.io/).
