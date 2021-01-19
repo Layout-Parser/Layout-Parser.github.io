@@ -3,6 +3,9 @@
 # disqus-ID: x
 # utterances-repo: x
 
+links:
+  slack: https://join.slack.com/t/layout-parser/shared_invite/zt-kor9c345-8RX2Y26o7E0qXKxmTnBxLQ
+
 assets:
   logo: '/assets/site/lp-logo.svg' 
   badge: '/assets/site/lp-badge-white.svg' 
