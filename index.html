@@ -23,19 +23,20 @@ show_nav: false
                             function copyPipInstall() {
                                 var copyText = document.getElementById("pip-install")
                                 var textArea = document.createElement("textarea")
+                                const content = copyText.textContent
                                 textArea.value = copyText.textContent
                                 document.body.appendChild(textArea)
                                 textArea.select()
                                 document.execCommand("Copy")
                                 textArea.remove()
-                                $("#pip-install-modal").addClass("is-active")
+                                $("#pip-install").text("Copied!")
                                 setTimeout(function () {
-                                    $('#pip-install-modal').removeClass("is-active")
-                                }, 800)
+                                    $("#pip-install").text(content)
+                                }, 2000)
                             }
                         </script>
 
-                        <span class="is-small mr-3">
+                        <span class="is-small mr-2">
                             <i class="fas fa-copy"></i>
                         </span>
                         <span id="pip-install">{{site.data.index.slogan.install}}</span>
@@ -161,10 +162,3 @@ show_nav: false
         </div>
     </div>
 </section>
-
-<div class="modal btn-anime" id="pip-install-modal">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-        <p class='modal-text'>Copied!</p>
-    </div>
-</div>
