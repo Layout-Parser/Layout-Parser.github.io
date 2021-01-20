@@ -1,0 +1,19 @@
+<section class="hero">
+    <div class="hero-body pb-0 {% if include.sep != true %}pt-0{%endif %}">
+        <div class="container">
+            {% if include.sep != true %}
+                <div class="is-divider"></div>
+            {% endif %}
+            <div class="columns is-centered mb-5">
+                <div class="column has-text-centered">
+                    <h1 class="title is-size-2">
+                        {{ include.title | markdownify }}
+                    </h1>
+                    <h2 class="subtitle is-size-4">
+                        {{ include.description | markdownify }}
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

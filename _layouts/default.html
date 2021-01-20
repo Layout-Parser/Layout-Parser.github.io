@@ -5,14 +5,10 @@
 
 <body>
 
-    <div class="section">            
-        <div class="container">
-            {% if page.show_nav != false %}
-                {% include nav.html %}  
-            {% endif %}
-            {{ content }}
-        </div>
-    </div>
+    {% if page.show_nav != false %}
+        {% include nav.html %}
+    {% endif %}
+    {{ content }}
     {% include footer.html %}
 </body>
 

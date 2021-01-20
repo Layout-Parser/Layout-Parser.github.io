@@ -1,0 +1,56 @@
+badge: '/assets/site/lp-badge-white.svg' 
+
+slogan: 
+  title: >
+    Layout Analysis <br>
+    in 4 Lines of Code
+  description: >
+    Accurate layout analysis using deep learning models. <br>
+    Highly customized labeling, training and deployment.
+  example: '/assets/site/example-usage.png' #TODO: change in near future
+  install: 'pip install layoutparser'
+
+what:
+  title: What is Layout Parser?
+  description: >
+    Layout Parser is a toolkit that streamlines deep learning based layout analysis. 
+  functions:  
+    - title: Datasets
+      attributes:
+        - name: Existing Datasets 
+          page: existing-datasets.html
+        - name: Efficient Annotation 
+    - title: Models
+      attributes:
+        - name: Pre-trained Models
+        - name: Customized Training
+    - title: Detection
+      attributes:
+        - name: Easy to use API
+    - title: Storage
+      attributes: 
+        - name: Multiple formats
+        - name: Visualization 
+
+learn:
+  title: Get started!
+  description:
+    Learn layout parser via a collection of carefully curated tutorials.
+  tutorials:
+    - title: Layout Parser Overview 
+      description: >
+        The overall layout analysis pipeline using Layout Parser, including loading models, layout detection detection, visualization, and storage. 
+      url: ""
+    - title: Efficient Data Annotation
+      description: >
+        How to use the provided tools for creating labeling dataset efficiently.
+      url: ""
+    - title: Fine-tune DL Models 
+      description: >
+        Customized training the deep learning detection models on your dataset. 
+      url: ""
+
+slack:
+  title: Join us on Slack!
+  figure: '/assets/site/slack-lp.svg'
+    

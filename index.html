@@ -1,24 +1,164 @@
 ---
-layout: page
+layout: default
+show_nav: false
 ---
 
-<section class="hero">
+<section class="hero is-danger is-bold slogan-hero">
+    <div class="hero-head">
+        {% include nav.html %}
+    </div>
     <div class="hero-body">
         <div class="container">
-            <p class='slogan'>{{site.data.meta.index.slogan}}</p>
+            <div class="columns">
+                <div class="column is-5">
+                    <h1 class="title slogan is-size-2">
+                        {{ site.data.index.slogan.title | markdownify }}
+                    </h1>
+                    <h2 class="subtitle has-text-white-ter slogan-description is-size-5">
+                        {{ site.data.index.slogan.description |
+                        markdownify }}
+                    </h2>
+                    <button class="mt-5 install-btn" onclick="copyPipInstall()">
+                        <script>
+                            function copyPipInstall() {
+                                var copyText = document.getElementById("pip-install")
+                                var textArea = document.createElement("textarea")
+                                const content = copyText.textContent
+                                textArea.value = copyText.textContent
+                                document.body.appendChild(textArea)
+                                textArea.select()
+                                document.execCommand("Copy")
+                                textArea.remove()
+                                $("#pip-install").text("Copied!")
+                                setTimeout(function () {
+                                    $("#pip-install").text(content)
+                                }, 2000)
+                            }
+                        </script>
+
+                        <span class="is-small mr-2">
+                            <i class="fas fa-copy"></i>
+                        </span>
+                        <span id="pip-install">{{site.data.index.slogan.install}}</span>
+                    </button>
+                </div>
+                <div class="column">
+                    <figure class="image is-2by1">
+                        <img src="{{ site.data.index.slogan.example }}">
+                    </figure>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-{% for section in site.data.meta.index.sections %}
+{% include index/centered-title.html title=site.data.index.what.title description=site.data.index.what.description sep=true %}
+
+
+<script>
+    window.onload = () => {
+        document.querySelectorAll(".menu").forEach(menu => {
+            menu.querySelectorAll('a').forEach(atag => {
+                console.log(atag.target)
+                atag.onclick = () => {
+                    menu.querySelector('a.is-active').classList.remove('is-active');
+                    atag.classList.add('is-active');
+                    menu.parentElement.nextElementSibling.querySelector(".what-hero-detail.is-active").classList.remove("is-active");
+                    menu.parentElement.nextElementSibling.querySelector("#" + atag.text.replaceAll(" ", "-")).classList.add("is-active");
+                }
+            })
+        })
+    }
+</script>
+
 <section class="hero">
-    <div class="hero-body">
+    <div class="hero-body pt-4">
         <div class="container">
-            <h1 class="title">
-                {{ section.title }}
-            </h1>
-            {{ section.description | markdownify }}
+            <div class="columns">
+                <div class="column is-3">
+                    <aside class="menu">
+                        {% assign count = 0 %}
+                        {% for function in site.data.index.what.functions %}
+                            <p class="menu-label">
+                                {{ function.title | capitalize }}
+                            </p>
+                            <ul class="menu-list">
+                                {% for attribute in function.attributes %}
+                                    <li>
+                                        <a {% if count==0 %} class="is-active" {% endif %}>{{ attribute.name }}</a>
+                                    </li>
+                                    {% assign count = count | plus : 1 %}
+                                {% endfor %}
+                            </ul>
+                        {% endfor %}
+                    </aside>
+                </div>
+                <div class="column is-8 is-offset-1">
+                    {% assign count = 0 %}
+                    {% for function in site.data.index.what.functions %}
+                        {% for attribute in function.attributes %}
+                            <div class="{% if count==0 %}is-active {% endif %}what-hero-detail"
+                            id="{{ attribute.name | replace: " ", "-" }}">
+                                {% if attribute.page != nil %}
+                                    {% assign target_page = "_functions/" | append: attribute.page %}
+                                    {% include_relative {{ target_page }} %}
+                                {% else %}
+                                    {% include_relative _functions/dummy.html %}
+                                {% endif %}
+                            </div>  
+                            {% assign count = count | plus : 1 %}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
 </section>
-{% endfor %}
+
+{% include index/centered-title.html title=site.data.index.learn.title description=site.data.index.learn.description %}
+
+<section class="hero">
+    <div class="hero-body pt-4">
+        <div class="container">
+            <div class="columns">
+                {% for tutorial in site.data.index.learn.tutorials %}
+                    <div class="column is-4">
+                        <div class="box" style="height: 100%">
+                            <h2 class="subtitle is-size-4">
+                                <a class="theme-color" href="{{ tutorial.url }}">{{ tutorial.title }}</a>
+                            </h2>
+                            {{ tutorial.description | markdownify }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero slack-hero mt-6">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <p class='title is-size-2 slack-title'>{{site.data.index.slack.title}}</p>
+                    <p class='subtitle is-size-5 mt-2'>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo convallis ultricies.
+                        Aliquam non suscipit nibh. Proin sed metus justo. Nullam dictum dolor vel felis accumsan
+                        congue...
+                    </p>
+                    <button class="mt-2 p-4 slack-btn">
+                        <a class="slack-btn-txt"
+                            href="{{ site.data.settings.links.slack }}"
+                            target="_blank">Join our #Slack</a>
+                    </button>
+                </div>
+                <div class="column is-two-fifths">
+                    <figure class="image is-2by1">
+                        <img src="{{ site.data.index.slack.figure }}">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
