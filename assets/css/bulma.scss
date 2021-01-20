@@ -20,7 +20,7 @@ $divider-thickness: 0.075rem;
 $tabs-border-bottom-width: 0.075rem;
 
 $red: #e46767;
-$dark-red: #e43851;
+$dark-red: #e43838;
 
 // Layout Issues
 $widescreen-enabled: true;
@@ -34,6 +34,17 @@ $navbar-item-img-max-height: 4rem;
 @import "bulma-divider/src/sass/index";
 
 // public
+
+a.is-active {
+    background-color: $red !important;
+}
+
+.theme-color {
+    color: $red;
+}
+.theme-color:hover {
+    color: $dark-red;
+}
 
 .install-btn,
 .slack-btn,
