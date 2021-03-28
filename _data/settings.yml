@@ -11,13 +11,18 @@ assets:
   badge: '/assets/site/lp-badge-white.svg' 
 
 menu:
-- {name: 'Tutorials', file: 'models.html'}
+- {name: 'Tutorials', file: '/tutorials.html'}
 - {name: 'Docs', file: 'https://layout-parser.readthedocs.io/en/latest/'}
 - {name: 'Discussion', file: ''}
 
 social:
 # - {name: 'slack', icon: 'fab fa-slack-hash', link: ''}
 - {name: 'Github', icon: 'fab fa-github', link: 'https://github.com/Layout-Parser/layout-parser'}
+
+tutorials:
+  categories:
+    - {name: 'starter', title: 'Starter Example'}
+    - {name: 'usecase', title: 'Use Cases'}
 
 footnote: >
   Created and maintained by Layout Parser Developers. Built with [jekyll](https://jekyllrb.com/) and [bulma](http://bulma.io/).
