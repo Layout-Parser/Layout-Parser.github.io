@@ -2,12 +2,11 @@ badge: '/assets/site/lp-badge-white.svg'
 
 slogan: 
   title: >
-    Layout Analysis <br>
+    Layout Analysis --
     in 4 Lines of Code
   description: >
-    Accurate layout analysis using deep learning models. <br>
-    Highly customized labeling, training and deployment.
-  example: '/assets/site/example-usage.png' #TODO: change in near future
+    Transform document image analysis pipelines with the full power of Deep Learning.
+  example: '/assets/images/index/pipeline.png'
   install: 'pip install layoutparser'
 
 what:
@@ -96,5 +95,7 @@ learn:
 
 slack:
   title: Join us on Slack!
+  description:
+    Questions or Bugs? Come and join our slack channel! Let's figure out that together and make a vibrant Layout Parser community.
   figure: '/assets/site/slack-lp.svg'
     

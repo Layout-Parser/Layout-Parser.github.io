@@ -1,10 +1,10 @@
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
-# google-ID: x
+google-ID: UA-193192572-1
 # disqus-ID: x
 # utterances-repo: x
 
 links:
-  slack: https://join.slack.com/t/layout-parser/shared_invite/zt-kor9c345-8RX2Y26o7E0qXKxmTnBxLQ
+  slack: https://join.slack.com/t/layout-parser/shared_invite/zt-ohjd14k1-OrJ2HltwVRGrxhLeHMfW_w
 
 assets:
   logo: '/assets/site/lp-logo.svg' 
@@ -13,7 +13,7 @@ assets:
 menu:
 - {name: 'Tutorials', file: '/tutorials.html'}
 - {name: 'Docs', file: 'https://layout-parser.readthedocs.io/en/latest/'}
-- {name: 'Discussion', file: ''}
+- {name: 'Discussion', file: 'https://join.slack.com/t/layout-parser/shared_invite/zt-ohjd14k1-OrJ2HltwVRGrxhLeHMfW_w'}
 
 social:
 # - {name: 'slack', icon: 'fab fa-slack-hash', link: ''}
