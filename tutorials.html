@@ -1,0 +1,35 @@
+---
+layout: page
+show_nav: false
+---
+
+<div class="content pb-3">
+    <h1 class="title is-size-2">
+        Layout Parser Tutorials
+    </h1>
+</div>
+<div class="columns">
+    <div class="column is-10">
+        {% for category in site.data.settings.tutorials.categories %}
+            <div class="pb-6">
+                <h2 class="subtitle is-size-4 mb-1">
+                    {{ category.title | upcase }}
+                </h2>
+    
+                {% for tutorial in site.tutorials %}
+                    {% if forloop.first == true %}
+                        <div class="is-divider my-3"></div>
+                    {% endif %}
+                    {% if tutorial.category == category.name %}
+                        {% if tutorial.external_link != nil %}
+                            <a class="is-size-5" href="{{tutorial.external_link}}">{{tutorial.title}}</a>
+                        {% else %}
+                            <a class="is-size-5" href="{{tutorial.url}}">{{tutorial.title}}</a>
+                        {% endif %}
+                        <div class="is-divider my-3"></div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
