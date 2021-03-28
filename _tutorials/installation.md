@@ -1,9 +1,12 @@
 ---
 layout: post
-description:   
-title: Install the LayoutParser Library
+date: 2021-03-28 11:59:59
+description: |
+    A complete instruction for installing the main Layout Parser library and auxiliary components. 
+title: Install LayoutParser
 category: starter
 show_nav: false
+featured: true
 ---
 
 ## Install Python
