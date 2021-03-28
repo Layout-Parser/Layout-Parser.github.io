@@ -33,17 +33,8 @@ what:
           To accommodate heterogenous document layout structures, Layout Parser a collection of DL models trained on different datasets. Currently the are 9 models trained on 5 diverse datasets, and they can be loaded via a unified interface. 
 
           ![Different Datasets](/assets/site/dataset-illustration.png)
-          ▲ *Exemplar images in the 5 used datasets (screenshots are taken from their papers or open-sourced datasets).*
+          ▲ *Exemplar images in the 5 used datasets (screenshots are taken from their papers or open-sourced datasets).* See detailed description in [Layout Parser documentation](https://layout-parser.readthedocs.io/en/latest/notes/modelzoo.html). 
 
-          |                                                           Dataset |   Models  | Notes                                                      |
-          |------------------------------------------------------------------:|:---------:|------------------------------------------------------------|
-          |             [PubLayNet](https://github.com/ibm-aur-nlp/PubLayNet) |   F / M   | Layouts of modern scientific documents                     |
-          |                   [PRImA](https://www.primaresearch.org/dataset/) |     M     | Layouts of scanned modern magazines and scientific reports |
-          | [Newspaper Navigator](https://news-navigator.labs.loc.gov/search) |     F     | Layouts of scanned US newspapers from 20th century         |
-          |            [TableBank](https://github.com/doc-analysis/TableBank) |     F     | Table region on modern scientific and business document    |
-          |   [HJDataset](https://dell-research-harvard.github.io/HJDataset/) | F / M / R | Layouts of history Japanese documents                      |
-          
-          ▲ *For each dataset, we provide models with different architectures like Faster RCNN (F), Mask RCNN (M), or Retina Net(R).*
     - section: Post-Processing
       subsections: 
       - name: Layout Data structure
