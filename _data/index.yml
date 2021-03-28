@@ -13,7 +13,7 @@ slogan:
 what:
   title: What is Layout Parser?
   description: >
-    Layout Parser is a toolkit that streamlines deep learning based layout analysis. 
+    A Unified Toolkit for Deep Learning Based Document Image Analysis
   functions:  
     - section: Layout Detection 
       subsections: 
@@ -44,8 +44,6 @@ what:
 
           ![Layout Data Structure API Illustration](/assets/site/api-specification.png)
 
-      - name: Visualization
-        - name: Visualization 
       - name: Visualization
         title: Highly Customizable Layout Data Visualization 
         description: | 
