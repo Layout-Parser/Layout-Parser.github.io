@@ -13,18 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: The LayoutParser Project
+title: Layout Parser
 description: >
-  The portfolio website for you.
+  A Unified Toolkit for Deep Learning Based Document Image Analysis
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://layout-parser.github.io" 
 
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-paginate-v2
-  - jekyll-archives
 
 sass:
     style: compressed
