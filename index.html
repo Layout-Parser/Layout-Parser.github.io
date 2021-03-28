@@ -115,18 +115,41 @@ show_nav: false
 <section class="hero">
     <div class="hero-body pt-4">
         <div class="container">
-            <div class="columns">
-                {% for tutorial in site.data.index.learn.tutorials %}
-                    <div class="column is-4">
-                        <div class="box" style="height: 100%">
-                            <h2 class="subtitle is-size-4">
-                                <a class="theme-color" href="{{ tutorial.url }}">{{ tutorial.title }}</a>
-                            </h2>
-                            {{ tutorial.description | markdownify }}
-                        </div>
+            {% assign count = 0 %}
+            {% assign is_new_row = count | modulo: 3 %}
+
+            {% for tutorial in site.tutorials %}
+                {% if forloop.first == true or is_new_row==0 %}
+                <div class="columns">
+                {% endif %}
+
+                {% if tutorial.featured == true %}
+                <div class="column is-4">
+                    <div class="box" style="height: 100%">
+                        <h2 class="subtitle is-size-4">
+                            {% if tutorial.external_link != nil %}
+                                {% assign url = tutorial.external_link %}
+                            {% else %}
+                                {% assign url = tutorial.url %}
+                            {% endif %}
+                            {% if tutorial.short_title != nil %}
+                                {% assign title = tutorial.short_title %}
+                            {% else %}
+                                {% assign title = tutorial.title %}
+                            {% endif %}
+                            <a class="theme-color" href="{{ url }}">{{ title }}</a>
+                        </h2>
+                        {{ tutorial.description | markdownify }}
                     </div>
-                {% endfor %}
-            </div>
+                </div>
+                {% assign count = count | plus: 1 %}
+                {% endif %}
+
+                {% assign is_new_row = count | modulo: 3 %}
+                {% if forloop.last == true or is_new_row==0 %}
+                </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </section>
