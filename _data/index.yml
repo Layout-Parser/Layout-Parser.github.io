@@ -13,24 +13,81 @@ slogan:
 what:
   title: What is Layout Parser?
   description: >
-    Layout Parser is a toolkit that streamlines deep learning based layout analysis. 
+    A Unified Toolkit for Deep Learning Based Document Image Analysis
   functions:  
-    - title: Datasets
-      attributes:
-        - name: Existing Datasets 
-          page: existing-datasets.html
-        - name: Efficient Annotation 
-    - title: Models
-      attributes:
-        - name: Pre-trained Models
-        - name: Customized Training
-    - title: Detection
-      attributes:
-        - name: Easy to use API
-    - title: Storage
-      attributes: 
-        - name: Multiple formats
-        - name: Visualization 
+    - section: Layout Detection 
+      subsections: 
+      - name: Deep Learning Models 
+        title: Accurate Layout Detection with a Simple and Clean Interface
+        description: |
+          With the help of state-of-the-art deep learning models, Layout Parser enables extracting complicated document structures using only several lines of code. 
+          This method is also more robust and generalizable as no sophisticated rules are involved 
+          in this process. 
+
+          ![Example of an universal API for Layout Detection](/assets/images/index/api-example.png)
+          ▲ *A set of universal APIs for performing layout detections on different types of documents.*
+          
+      - name: Pre-trained Model Zoo
+        title: A Wealth of Pre-trained Models on Different Datasets 
+        description: |
+          To accommodate heterogenous document layout structures, Layout Parser a collection of DL models trained on different datasets. Currently the are 9 models trained on 5 diverse datasets, and they can be loaded via a unified interface. 
+
+          ![Different Datasets](/assets/images/index/dataset-illustration.png)
+          ▲ *Exemplar images in the 5 used datasets (screenshots are taken from their papers or open-sourced datasets).* 
+        ref: |
+          - [Layout Parser Model Zoo](https://layout-parser.readthedocs.io/en/latest/notes/modelzoo.html)
+
+    - section: Post-Processing
+      subsections: 
+      - name: Layout Data structure
+        title: Easy Layout Data Manipulation and Processing
+        description: |
+          Layout Parser supports different levels of abstraction of layout data, and provide three classes of representation for layout data, namely, `Coordinates`, `TextBlock`, and `Layout`. The same operations and transformations are supported inter and intra these classes to maximize the efficiency when processing the layout data. 
+
+          ![Layout Data Structure API Illustration](/assets/images/index/api-specification.png)
+        ref: |
+          - [Layout Data Structure Documentation](https://layout-parser.readthedocs.io/en/latest/api_doc/elements.html)
+
+      - name: Visualization
+        title: Highly Customizable Layout Data Visualization 
+        description: | 
+          Layout Parser visualizes the layout data using a simple syntax: `lp.draw_box` or `lp.draw_text`. It provides two modes for displaying the layout data: Mode I directly overlays the layout region bounding boxes and categories over the original image. Mode II recreates the original document via drawing the OCR’d texts at their corresponding positions on the image canvas.
+
+          ![Examples of Layout Data Visualization](/assets/images/index/viz-example.png)
+        ref: |
+          - [Layout Parser Visualization Documentation](https://layout-parser.readthedocs.io/en/latest/api_doc/visualization.html)
+
+      - name: Export and Storage
+        title: Export Layout Data in Your Favorite Format
+        description: | 
+          Layout Parser supports loading and exporting layout data to different formats, including general formats like `csv`, `json`, or domain-specific formats like `PAGE`, `COCO`, or `METS/ALTO` format (Full support for them will be released soon). It provides the flexibility for integrating Layout Parser with other document image analysis pipelines, and makes it easy to share your outputs with the community. 
+
+    - section: Customization
+      subsections:
+      - name: Train Layout Models
+        title: Easy to Train Your Own Layout Models with Best Accuracy
+        description: |
+          Layout Parser also comes with full support for customized layout model training on your own dataset. This enables you to achieve optimal prediction accuracy on your own dataset and can simplify your pipeline. Different training mode are supported, i.e., training from scratch or fine-tuning from an existing model. Learn more details at [Layout-Parser/layout-model-training](https://github.com/Layout-Parser/layout-model-training).
+        ref: |
+          - [The layout-model-training Repository](https://github.com/Layout-Parser/layout-model-training)
+
+      - name: Efficient Data Labeling
+        title: Efficiently Creating Your Training Dataset
+        description: |
+          No labeled training data available? Don't worry! Layout Parser also incorporates a data annotation toolkit that enables creating the training dataset much more efficiently. 
+          Shown in the illustration below, the tool loads layout predictions from pre-trained models (a), and users only need to select and check a small percentage of model predictions to correct or relabel (b). False-Negative Highlighter (c) helps recognize mis-identified objects from the model predictions. After these steps, the full image annotation is created with less effort.
+          
+          ![Illustration of Labeling Interface](/assets/images/index/labeling-ui.png)
+
+          ▲ *Illustration of the annotation interface with Object-Level Active Learning features.* [Learn more in this paper](https://arxiv.org/pdf/2010.01762.pdf).
+    - section: Community
+      subsections: 
+      - name: Sharing Platform
+        title: Layout Models & Pipelines Sharing Platform
+        description: |
+          Layout Parser also aims to create a community platform for document image analysis (DIA) research and application. One key challenge in current DIA is the reusability of both layout models and pipelines. Layout Parser maintainers are currently working on implementing the platform for practitioners to share their models and pipelines easily. By streamline the distribution of layout models, as well as promoting the reusability of layout pipelines, it can potentially transform the DIA workflow and pipelines broadly. 
+
+          [This function will be released soon.]
 
 learn:
   title: Get started!

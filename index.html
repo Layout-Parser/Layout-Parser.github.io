@@ -80,12 +80,12 @@ show_nav: false
                         {% assign count = 0 %}
                         {% for function in site.data.index.what.functions %}
                             <p class="menu-label">
-                                {{ function.title | capitalize }}
+                                {{ function.section | capitalize }}
                             </p>
                             <ul class="menu-list">
-                                {% for attribute in function.attributes %}
+                                {% for subsection in function.subsections %}
                                     <li>
-                                        <a {% if count==0 %} class="is-active" {% endif %}>{{ attribute.name }}</a>
+                                        <a {% if count==0 %} class="is-active" {% endif %}>{{ subsection.name }}</a>
                                     </li>
                                     {% assign count = count | plus : 1 %}
                                 {% endfor %}
@@ -96,15 +96,10 @@ show_nav: false
                 <div class="column is-8 is-offset-1">
                     {% assign count = 0 %}
                     {% for function in site.data.index.what.functions %}
-                        {% for attribute in function.attributes %}
+                        {% for subsection in function.subsections %}
                             <div class="{% if count==0 %}is-active {% endif %}what-hero-detail"
-                            id="{{ attribute.name | replace: " ", "-" }}">
-                                {% if attribute.page != nil %}
-                                    {% assign target_page = "_functions/" | append: attribute.page %}
-                                    {% include_relative {{ target_page }} %}
-                                {% else %}
-                                    {% include_relative _functions/dummy.html %}
-                                {% endif %}
+                            id="{{ subsection.name | replace: " ", "-" }}">
+                                {% include index/function.html data=subsection %}
                             </div>  
                             {% assign count = count | plus : 1 %}
                         {% endfor %}
