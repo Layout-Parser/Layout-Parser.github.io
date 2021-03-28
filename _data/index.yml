@@ -7,7 +7,7 @@ slogan:
   description: >
     Accurate layout analysis using deep learning models. <br>
     Highly customized labeling, training and deployment.
-  example: '/assets/site/example-usage.png' #TODO: change in near future
+  example: '/assets/images/index/pipeline.png'
   install: 'pip install layoutparser'
 
 what:
