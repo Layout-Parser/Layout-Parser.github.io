@@ -99,11 +99,7 @@ show_nav: false
                         {% for subsection in function.subsections %}
                             <div class="{% if count==0 %}is-active {% endif %}what-hero-detail"
                             id="{{ subsection.name | replace: " ", "-" }}">
-                                {% if subsection.description != nil %}
-                                    {% include index/function.html data=subsection %}
-                                {% else %}
-                                    {% include_relative _functions/dummy.html %}
-                                {% endif %}
+                                {% include index/function.html data=subsection %}
                             </div>  
                             {% assign count = count | plus : 1 %}
                         {% endfor %}
