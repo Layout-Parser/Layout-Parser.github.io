@@ -10,4 +10,12 @@
     <p>
         {{ include.data.description | markdownify }}
     </p>
+    {% if include.data.ref %}
+    <p>
+{% capture newLine %}
+{% endcapture %}
+<!-- An technique learned from https://community.shopify.com/c/Shopify-Design/Adding-newline-quot-n-quot-not-lt-br-gt-to-text-string-in-liquid/td-p/215995 for capturing newlines -->
+        {{ include.data.ref | prepend: newLine | prepend: "**See Also:**" | markdownify }}
+    </p>
+    {% endif %}
 </div>
