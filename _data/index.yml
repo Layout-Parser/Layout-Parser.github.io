@@ -24,7 +24,7 @@ what:
           This method is also more robust and generalizable as no sophisticated rules are involved 
           in this process. 
 
-          ![Example of an universal API for Layout Detection](/assets/site/api-example.png)
+          ![Example of an universal API for Layout Detection](/assets/images/index/api-example.png)
           ▲ *A set of universal APIs for performing layout detections on different types of documents.*
           
       - name: Pre-trained Model Zoo
@@ -32,7 +32,7 @@ what:
         description: |
           To accommodate heterogenous document layout structures, Layout Parser a collection of DL models trained on different datasets. Currently the are 9 models trained on 5 diverse datasets, and they can be loaded via a unified interface. 
 
-          ![Different Datasets](/assets/site/dataset-illustration.png)
+          ![Different Datasets](/assets/images/index/dataset-illustration.png)
           ▲ *Exemplar images in the 5 used datasets (screenshots are taken from their papers or open-sourced datasets).* 
         ref: |
           - [Layout Parser Model Zoo](https://layout-parser.readthedocs.io/en/latest/notes/modelzoo.html)
@@ -44,7 +44,7 @@ what:
         description: |
           Layout Parser supports different levels of abstraction of layout data, and provide three classes of representation for layout data, namely, `Coordinates`, `TextBlock`, and `Layout`. The same operations and transformations are supported inter and intra these classes to maximize the efficiency when processing the layout data. 
 
-          ![Layout Data Structure API Illustration](/assets/site/api-specification.png)
+          ![Layout Data Structure API Illustration](/assets/images/index/api-specification.png)
         ref: |
           - [Layout Data Structure Documentation](https://layout-parser.readthedocs.io/en/latest/api_doc/elements.html)
 
@@ -53,7 +53,7 @@ what:
         description: | 
           Layout Parser visualizes the layout data using a simple syntax: `lp.draw_box` or `lp.draw_text`. It provides two modes for displaying the layout data: Mode I directly overlays the layout region bounding boxes and categories over the original image. Mode II recreates the original document via drawing the OCR’d texts at their corresponding positions on the image canvas.
 
-          ![Examples of Layout Data Visualization](/assets/site/viz-example.png)
+          ![Examples of Layout Data Visualization](/assets/images/index/viz-example.png)
         ref: |
           - [Layout Parser Visualization Documentation](https://layout-parser.readthedocs.io/en/latest/api_doc/visualization.html)
 
@@ -77,7 +77,7 @@ what:
           No labeled training data available? Don't worry! Layout Parser also incorporates a data annotation toolkit that enables creating the training dataset much more efficiently. 
           Shown in the illustration below, the tool loads layout predictions from pre-trained models (a), and users only need to select and check a small percentage of model predictions to correct or relabel (b). False-Negative Highlighter (c) helps recognize mis-identified objects from the model predictions. After these steps, the full image annotation is created with less effort.
           
-          ![Illustration of Labeling Interface](/assets/site/labeling-ui.png)
+          ![Illustration of Labeling Interface](/assets/images/index/labeling-ui.png)
 
           ▲ *Illustration of the annotation interface with Object-Level Active Learning features.* [Learn more in this paper](https://arxiv.org/pdf/2010.01762.pdf).
     - section: Community
