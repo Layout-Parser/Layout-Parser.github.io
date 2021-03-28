@@ -33,7 +33,9 @@ what:
           To accommodate heterogenous document layout structures, Layout Parser a collection of DL models trained on different datasets. Currently the are 9 models trained on 5 diverse datasets, and they can be loaded via a unified interface. 
 
           ![Different Datasets](/assets/site/dataset-illustration.png)
-          ▲ *Exemplar images in the 5 used datasets (screenshots are taken from their papers or open-sourced datasets).* See detailed description in [Layout Parser documentation](https://layout-parser.readthedocs.io/en/latest/notes/modelzoo.html). 
+          ▲ *Exemplar images in the 5 used datasets (screenshots are taken from their papers or open-sourced datasets).* 
+        ref: |
+          - [Layout Parser Model Zoo](https://layout-parser.readthedocs.io/en/latest/notes/modelzoo.html)
 
     - section: Post-Processing
       subsections: 
@@ -43,6 +45,8 @@ what:
           Layout Parser supports different levels of abstraction of layout data, and provide three classes of representation for layout data, namely, `Coordinates`, `TextBlock`, and `Layout`. The same operations and transformations are supported inter and intra these classes to maximize the efficiency when processing the layout data. 
 
           ![Layout Data Structure API Illustration](/assets/site/api-specification.png)
+        ref: |
+          - [Layout Data Structure Documentation](https://layout-parser.readthedocs.io/en/latest/api_doc/elements.html)
 
       - name: Visualization
         title: Highly Customizable Layout Data Visualization 
@@ -50,6 +54,8 @@ what:
           Layout Parser visualizes the layout data using a simple syntax: `lp.draw_box` or `lp.draw_text`. It provides two modes for displaying the layout data: Mode I directly overlays the layout region bounding boxes and categories over the original image. Mode II recreates the original document via drawing the OCR’d texts at their corresponding positions on the image canvas.
 
           ![Examples of Layout Data Visualization](/assets/site/viz-example.png)
+        ref: |
+          - [Layout Parser Visualization Documentation](https://layout-parser.readthedocs.io/en/latest/api_doc/visualization.html)
 
       - name: Export and Storage
         title: Export Layout Data in Your Favorite Format
@@ -62,6 +68,8 @@ what:
         title: Easy to Train Your Own Layout Models with Best Accuracy
         description: |
           Layout Parser also comes with full support for customized layout model training on your own dataset. This enables you to achieve optimal prediction accuracy on your own dataset and can simplify your pipeline. Different training mode are supported, i.e., training from scratch or fine-tuning from an existing model. Learn more details at [Layout-Parser/layout-model-training](https://github.com/Layout-Parser/layout-model-training).
+        ref: |
+          - [The layout-model-training Repository](https://github.com/Layout-Parser/layout-model-training)
 
       - name: Efficient Data Labeling
         title: Efficiently Creating Your Training Dataset
