@@ -93,19 +93,6 @@ learn:
   title: Get started!
   description:
     Learn layout parser via a collection of carefully curated tutorials.
-  tutorials:
-    - title: Layout Parser Overview 
-      description: >
-        The overall layout analysis pipeline using Layout Parser, including loading models, layout detection detection, visualization, and storage. 
-      url: ""
-    - title: Efficient Data Annotation
-      description: >
-        How to use the provided tools for creating labeling dataset efficiently.
-      url: ""
-    - title: Fine-tune DL Models 
-      description: >
-        Customized training the deep learning detection models on your dataset. 
-      url: ""
 
 slack:
   title: Join us on Slack!
