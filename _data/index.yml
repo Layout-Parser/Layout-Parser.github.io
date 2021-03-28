@@ -96,5 +96,7 @@ learn:
 
 slack:
   title: Join us on Slack!
+  description:
+    Questions or Bugs? Come and join our slack channel! Let's figure out that together and make a vibrant Layout Parser community.
   figure: '/assets/site/slack-lp.svg'
     
