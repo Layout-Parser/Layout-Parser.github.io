@@ -1,7 +1,18 @@
 ---
 layout: default
+show_nav: false
 ---
 
-<div class="container">
-  {{ content }}
-</div>
+<section class="hero is-danger is-bold slogan-hero">
+    <div class="hero-head">
+        {% include nav.html %}
+    </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body is-white">
+      <div class="container">
+          {{content}}
+      </div>
+  </div>
+</section>
