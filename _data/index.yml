@@ -2,11 +2,10 @@ badge: '/assets/site/lp-badge-white.svg'
 
 slogan: 
   title: >
-    Layout Analysis <br>
+    Layout Analysis --
     in 4 Lines of Code
   description: >
-    Accurate layout analysis using deep learning models. <br>
-    Highly customized labeling, training and deployment.
+    Transform document image analysis pipelines with the full power of Deep Learning.
   example: '/assets/images/index/pipeline.png'
   install: 'pip install layoutparser'
 

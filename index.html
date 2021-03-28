@@ -9,45 +9,38 @@ show_nav: false
     </div>
     <div class="hero-body">
         <div class="container">
-            <div class="columns">
-                <div class="column is-5">
-                    <h1 class="title slogan is-size-2">
-                        {{ site.data.index.slogan.title | markdownify }}
-                    </h1>
-                    <h2 class="subtitle has-text-white-ter slogan-description is-size-5">
-                        {{ site.data.index.slogan.description |
-                        markdownify }}
-                    </h2>
-                    <button class="mt-5 install-btn" onclick="copyPipInstall()">
-                        <script>
-                            function copyPipInstall() {
-                                var copyText = document.getElementById("pip-install")
-                                var textArea = document.createElement("textarea")
-                                const content = copyText.textContent
-                                textArea.value = copyText.textContent
-                                document.body.appendChild(textArea)
-                                textArea.select()
-                                document.execCommand("Copy")
-                                textArea.remove()
-                                $("#pip-install").text("Copied!")
-                                setTimeout(function () {
-                                    $("#pip-install").text(content)
-                                }, 2000)
-                            }
-                        </script>
+            
+            <h1 class="title slogan is-size-2">
+                {{ site.data.index.slogan.title | markdownify }}
+            </h1>
+            <h2 class="subtitle has-text-white-ter slogan-description is-size-5">
+                {{ site.data.index.slogan.description |
+                markdownify }}
+            </h2>
+            <button class="mt-5 install-btn" onclick="copyPipInstall()">
+                <script>
+                    function copyPipInstall() {
+                        var copyText = document.getElementById("pip-install")
+                        var textArea = document.createElement("textarea")
+                        const content = copyText.textContent
+                        textArea.value = copyText.textContent
+                        document.body.appendChild(textArea)
+                        textArea.select()
+                        document.execCommand("Copy")
+                        textArea.remove()
+                        $("#pip-install").text("Copied!")
+                        setTimeout(function () {
+                            $("#pip-install").text(content)
+                        }, 2000)
+                    }
+                </script>
 
-                        <span class="is-small mr-2">
-                            <i class="fas fa-copy"></i>
-                        </span>
-                        <span id="pip-install">{{site.data.index.slogan.install}}</span>
-                    </button>
-                </div>
-                <div class="column">
-                    <figure class="image">
-                        <img src="{{ site.data.index.slogan.example }}">
-                    </figure>
-                </div>
-            </div>
+                <span class="is-small mr-2">
+                    <i class="fas fa-copy"></i>
+                </span>
+                <span id="pip-install">{{site.data.index.slogan.install}}</span>
+            </button>
+
         </div>
     </div>
 </section>
