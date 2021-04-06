@@ -18,7 +18,7 @@
             <div class="navbar-end">
                 <!-- navbar items -->
                 {% for item in site.data.settings.menu %}
-                <a href="{{ item.file }}" class="navbar-item">{{ item.name }}</a>
+                <a href="{{ item.file }}" onmousedown="return false" class="navbar-item">{{ item.name }}</a>
                 {% endfor %}
                 {% for item in site.data.settings.social %}
                 <div class="navbar-item">
