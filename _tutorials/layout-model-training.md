@@ -4,15 +4,8 @@ Automatically Parse any Document
 Train Detectron2 based Custom Models for Document Layout Parsing
 ----------------------------------------------------------------
 
-[![Nasheed Yasin](https://miro.medium.com/fit/c/56/56/0*IYbXMKhDeXCa3mPn)](https://medium.com/@nasheed.ny?source=post_page-----5d72e81b0be9--------------------------------)[
-
-Nasheed Yasin
-
-](https://medium.com/@nasheed.ny?source=post_page-----5d72e81b0be9--------------------------------)[
-
-Jul 1·5 min read
-
-](https://medium.com/auto-parse-and-understand-any-document-5d72e81b0be9?source=post_page-----5d72e81b0be9--------------------------------)
+[Nasheed Yasin](https://www.linkedin.com/in/nasheed-yasin/)
+#### [Medium Post](https://towardsdatascience.com/auto-parse-and-understand-any-document-5d72e81b0be9) | July 1st, 2021 | 5 min read
 
 ![A depiction of various layouts one encounters in everyday and sometimes not so everyday life, with the code to parse such layouts using the layoutparser library, superimposed on top of it.](https://miro.medium.com/max/2000/1*dc63KJapDFxivyeoksWEDg.png)Image by [Layout Parser](https://layout-parser.github.io/) on [GitHub](https://github.com/Layout-Parser/layout-parser/blob/master/.github/example.png)
 
@@ -27,18 +20,15 @@ To that extent, [Layout Parser](https://pypi.org/project/layoutparser/), as expl
 **Now, how can one use this tool to understand and work on custom layouts beyond the capabilities of the pre-trained models?**
 ==============================================================================================================================
 
-<img alt="Images of two scientific papers with their layout components marked." class="et fh fd ms v" src="https://miro.medium.com/max/1000/1\*1vMzOHtusP88Wzz0L5F2tw.png" width="500" height="311" srcSet="https://miro.medium.com/max/552/1\*1vMzOHtusP88Wzz0L5F2tw.png 276w, https://miro.medium.com/max/1000/1\*1vMzOHtusP88Wzz0L5F2tw.png 500w" sizes="500px"/>
+![Images of two scientific papers with their layout components marked.](https://miro.medium.com/max/1000/1\*1vMzOHtusP88Wzz0L5F2tw.png) Image by author
 
-Image by author
-
-> The obvious thought would be to fine tune an existing layout model on your custom layouts.
+## *The obvious thought would be to fine tune an existing layout model on your custom layouts.*
 
 And you are right, it is the best way to go, especially given that not all of us have access to the hardware firepower required to train such models from scratch.
 
 While the finetuning process is a tad more technically involved than just using a pre-trained model, a handy [repository](https://github.com/Layout-Parser/layout-model-training) created by the authors of [Layout Parser](https://pypi.org/project/layoutparser/), helps alleviate some of these issues by largely handling the untenable bits of the training/ finetuning activity.
 
-<img alt="A rather unique arrange of gears shaped pretty similar to that of a human brain, signifying intelligent design." class="et fh fd ms v" src="https://miro.medium.com/max/982/1\*c5cS72gecmtJSNUD3QfoFA.gif" width="491" height="270" srcSet="https://miro.medium.com/max/552/1\*c5cS72gecmtJSNUD3QfoFA.gif 276w, https://miro.medium.com/max/982/1\*c5cS72gecmtJSNUD3QfoFA.gif 491w" sizes="491px"/>
-
+!["A rather unique arrange of gears shaped pretty similar to that of a human brain, signifying intelligent design.](https://miro.medium.com/max/982/1\*c5cS72gecmtJSNUD3QfoFA.gif)
 GIF by [Gareth Fowler](http://www.garethfowler.com/) on [Tumblr](https://gifsofprocesses.tumblr.com/post/160274145124/nautilus-gears)
 
 **In the following sections we go through a comprehensive tutorial on using** [**this repository**](https://github.com/Layout-Parser/layout-model-training) **to train your own custom models.**
@@ -78,6 +68,8 @@ Step 2: Splitting the Dataset (Optional)
 *   The script ensures that in the event of images without tagged regions being present in the dataset, the ratio of tagged to untagged images in the train and test subsets will be equal.
 *   Use the below command to split your dataset (Assuming the working directory is as instructed in the previous step).
 
+<script src="https://gist.github.com/nasheedyasin/39ed0fe84ae2167393c96d7029ede9cf.js" charset="utf-8"></script>
+
 _Note that the above command is on a Windows 10 based system, alter the path separators according to the Operating System._
 
 Argument Explanation
@@ -104,6 +96,8 @@ Now that the dataset is split and the pretrained model weights are downloaded, l
 *   The training is done using the training script at `tools\train_net.py`
 *   Use the command below to train the model.
 
+<script src="https://gist.github.com/nasheedyasin/5bf6754ae2ef20d7e1f2d3142a93797e.js" charset="utf-8"></script>
+
 _Note that the above command is on a Windows 10 based system, alter the path separators according to the Operating System._
 
 Argument Explanation
@@ -126,6 +120,8 @@ Step 5: Inference
 With the finetuned model, it is a straightforward task to use it to parse documents.
 
 *   Replace the model initialization with the below code in [Layout Parser](https://pypi.org/project/layoutparser/)’s demo.
+
+<script src="https://gist.github.com/nasheedyasin/989dac825d3293d89447e51e8a1fd159.js" charset="utf-8"></script>
 
 _Note that the above paths are based on a Windows 10 based system, alter the path separators according to the Operating System._
 
