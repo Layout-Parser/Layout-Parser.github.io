@@ -13,6 +13,7 @@ assets:
 menu:
 - {name: 'Tutorials', file: '/tutorials.html'}
 - {name: 'Docs', file: 'https://layout-parser.readthedocs.io/en/latest/'}
+- {name: 'Open Platform', file: '/platform'}
 - {name: 'Discussion', file: 'https://join.slack.com/t/layout-parser/shared_invite/zt-ohjd14k1-OrJ2HltwVRGrxhLeHMfW_w'}
 
 social:
