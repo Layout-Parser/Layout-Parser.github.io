@@ -80,15 +80,30 @@ what:
           ![Illustration of Labeling Interface](/assets/images/index/labeling-ui.png)
 
           ▲ *Illustration of the annotation interface with Object-Level Active Learning features.* [Learn more in this paper](https://arxiv.org/pdf/2010.01762.pdf).
-    - section: Community
+        ref: |
+          - [Layout Annotation Service](https://github.com/Layout-Parser/annotation-service)  
+          - [The PAWLS Annotation Tool](https://github.com/allenai/pawls)  
+
+    - section: Community & Resources
       subsections: 
       - name: Sharing Platform
         title: Layout Models & Pipelines Sharing Platform
         description: |
           Layout Parser also aims to create a community platform for document image analysis (DIA) research and application. One key challenge in current DIA is the reusability of both layout models and pipelines. Layout Parser maintainers are currently working on implementing the platform for practitioners to share their models and pipelines easily. By streamline the distribution of layout models, as well as promoting the reusability of layout pipelines, it can potentially transform the DIA workflow and pipelines broadly. 
-
-          [This function will be released soon.]
-
+          <p align="center">
+            <a href="https://layout-parser.github.io/platform/">
+              <img src="/assets/images/index/platform.jpeg" alt="Illustration of the sharing Platform" style="width:75%;"/>
+            </a>
+          </p>
+      - name: Tutorial Video
+        title: 
+        description: |
+          <div class="video_container">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YG0qepPgyGY" frameborder="0" allowfullscreen="true"></iframe>
+          </div>
+          
+          _Note: This is Layout Parser's presentation video at [ICDAR 2021](https://icdar2021.org), a top venue for document recognition and understanding. In this talk, we discussed the design of the Layout Parser and demoed its key features._
+        
 learn:
   title: Get started!
   description:
